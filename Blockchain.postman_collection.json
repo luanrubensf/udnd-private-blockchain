@@ -1,0 +1,115 @@
+{
+	"variables": [],
+	"info": {
+		"name": "[UDACITY] Private Blockchain",
+		"_postman_id": "baa38f98-52ef-c542-5015-aeb4905da52d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Genesis Block",
+			"request": {
+				"url": "http://localhost:8000/block/height/0",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get block by hash",
+			"request": {
+				"url": "http://localhost:8000/block/hash/b2168e78e311d6a7422fe54c76d4af9bc6639f9801999f75c864ebcb0409be0a",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Validate chain",
+			"request": {
+				"url": "http://localhost:8000/validate",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get chain height",
+			"request": {
+				"url": "http://localhost:8000/chain-height",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Request validation",
+			"request": {
+				"url": "http://localhost:8000/requestValidation",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\": \"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Submit star",
+			"request": {
+				"url": "http://localhost:8000/submitstar",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\": \"\",\n\t\"signature\": \"\",\n\t\"message\": \"\",\n\t\"star\": {\n        \"dec\": \"68 52 89.9\",\n        \"ra\": \"9h 27m 1.5s\",\n        \"story\": \"new star now 4444\"\n     }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get my stars",
+			"request": {
+				"url": "http://localhost:8000/blocks/address",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\": \"mrhstLDj4zFtVQ8L69FN3WVKAC85ekp6ya\",\n\t\"signature\": \"H5UdPqlx7+IB0mVVMSpgspL28hqpBUiDUrkHNQCorm05MiNcxcCaOQoqS8udJV3/YzQNXJy07thv5s6ESQpmNgg=\",\n\t\"message\": \"mrhstLDj4zFtVQ8L69FN3WVKAC85ekp6ya:1631636361:starRegistry\",\n\t\"star\": {\n        \"dec\": \"68° 52' 56.9\",\n        \"ra\": \"16h 29m 1.0s\",\n        \"story\": \"Testing the story 4\"\n     }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
