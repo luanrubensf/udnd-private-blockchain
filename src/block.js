@@ -10,7 +10,6 @@
  */
 
 const SHA256 = require('crypto-js/sha256');
-const e = require('express');
 const hex2ascii = require('hex2ascii');
 
 class Block {
