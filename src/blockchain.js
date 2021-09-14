@@ -136,7 +136,6 @@ class Blockchain {
             }
 
             if (bitcoinMessage.verify(message, address, signature)) { 
-                // todo: check _addBlock return
                 const block = new BlockClass.Block({
                     owner: address,
                     star,
